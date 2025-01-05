@@ -17,13 +17,11 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         $user = auth()->user();
-//        echo "fdfd";
-//        dd('ff');
         if (auth()->check() && $user->role === 0){
             return $next($request);
         }else{
             return redirect('/');
         }
-        return $next($request);
+
     }
 }

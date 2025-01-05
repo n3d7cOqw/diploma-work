@@ -1,0 +1,73 @@
+.sidebar {
+    background-color: #ffffff; /* Білий фон */
+    color: #34495e; /* Темно-синій текст */
+    height: 100vh; /* Висота на весь екран */
+    width: 250px; /* Ширина */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-right: 2px solid #e5e5e5; /* Тонка сіра лінія праворуч */
+}
+
+/* Заголовок */
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2980b9; /* Яскраво-синій */
+}
+
+/* Меню */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin: 15px 0;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #34495e;
+    padding: 10px 20px;
+    border-radius: 5px; /* Закруглення */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Іконки та текст */
+.sidebar-menu a i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #2980b9; /* Синій для іконок */
+}
+
+/* Ховер та активний стан */
+.sidebar-menu a:hover {
+    background-color: #f0f8ff; /* Світло-синій фон */
+    color: #2980b9; /* Яскраво-синій текст */
+}
+
+.sidebar-menu a.active {
+    background-color: #2980b9; /* Синій фон для активного пункту */
+    color: #ffffff; /* Білий текст */
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar-menu a {
+        font-size: 0.9rem;
+    }
+}
